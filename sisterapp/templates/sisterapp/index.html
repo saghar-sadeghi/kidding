@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>یک سوال مهم 😏</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #ffe6f0;
+        }
+
+        .box {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 35px;
+        }
+
+        button {
+            border: none;
+            border-radius: 15px;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        #yes {
+            background: #4caf50;
+            color: white;
+        }
+
+        #no {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1 id="question">تو خری؟ 🐮</h1>
+
+    <button id="yes">yes 😍</button>
+    <button id="no">nooooo 😐</button>
+
+</div>
+
+<script>
+
+    const yesButton = document.getElementById("yes");
+    const noButton = document.getElementById("no");
+    const question = document.getElementById("question");
+
+    let yesSize = 20;
+
+    noButton.addEventListener("click", function () {
+
+        yesSize += 10;
+
+        yesButton.style.fontSize = yesSize + "px";
+        yesButton.style.padding = (yesSize * 0.7) + "px " + (yesSize * 1.2) + "px";
+
+    });
+
+    yesButton.addEventListener("click", function () {
+
+        question.innerHTML = "خوشبختم از دیدنت ای خر ناز ❤️";
+
+        yesButton.style.display = "none";
+        noButton.style.display = "none";
+
+    });
+
+</script>
+
+</body>
+</html>
